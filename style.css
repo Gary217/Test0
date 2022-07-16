@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+}
+
+.container-body {
+    background-color: #C0DBD9;
+    width: 1200px;
+    height: 1000px;
+    margin: 0 auto;
+    padding: 0 15px 0 15px;
+}
+
+header {
+    width: 1170px;
+    height: 100px;
+}
+
+.container-header {
+    background-color: #7FAFF6;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    background-color: #A5C7F9;
+    color: #FFFFFF;
+    width: 206px;
+    height: 39px;
+    font-size: 20px;
+    line-height: 23px;
+    border-radius: 5px;
+    border: 0;
+    margin: 30.5px 0 30.5px 30px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+main {
+    width: 1170px;
+}
+
+.container-main1 {
+    background-color: #B3F95A;
+    height: 411px;
+    margin: 15px 0;
+    grid-gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    counter-reset: headings 0;
+    color:#FFFFFF;
+}
+
+.frame {
+    background-color: #8AD191;
+    height: 198px;
+}
+
+.frame1 {
+    width: 390px;
+}
+
+.frame2 {
+    width: 590px;
+}
+
+.frame3 {
+    width: 160px;
+}
+
+.frame4 {
+    width: 995px;
+}
+
+.frame5 {
+    width: 160px;
+}
+
+div.frame::before {
+    counter-increment: headings 1;
+    content: counter(headings);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;  
+    font-size: 53px;
+    line-height: 62px;                
+}
+
+.container-main2 {
+    background-color: #88B5BF;
+    height: 259px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.frame01 {
+    background-color: #0D89B0;
+    width: 255px;
+    height: 179px;
+}
+
+footer{
+    height: 100px;  
+}
+
+.container-footer {
+    background-color: #7FAFF6;
+    height: 100%;  
+    margin-top: 100px;
+}
+
+.modal {
+    width: 400px;
+    height: 400px;
+    background-color:#FFFFFF;
+
+    position: fixed; /* фиксированное положение */
+    /* top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* translate отталкивается от размеров элемента, к которому применятся свойство */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal:target {
+    opacity: 1; /* делаем окно видимым */
+	pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+
+.modal-content {
+    width: 400px;
+    height: 400px;
+    position: inherit;
+}
+
+.modal-title {
+    font-size: 53px;
+    line-height: 62px;
+    font-weight: 400;
+}
+/* Стили кнопки "х" ("Закрыть")  */
+.close {
+    float: right;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    width: 43px;
+    height: 39px;
+    background-color: #7FAFF6;
+    border-radius: 5px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Стили для закрывающей кнопки в фокусе или наведении */
+.close:focus, .close:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
